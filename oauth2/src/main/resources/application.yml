@@ -1,0 +1,24 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/dev
+    username: root
+    password:
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+
+
+jwt:
+  secret: secret
+  expiration: 3000
+  token: Authorization
